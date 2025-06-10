@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Search Pro</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header with Theme Toggle -->
+      <header class="header">
+        <h1 class="app-title">Image Search Pro</h1>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-icon">🌙</span>
+        </button>
+      </header>
+
+      <!-- Search Form with History -->
+      <form class="search-form" id="search-form">
+        <div class="search-container">
+          <input type="text" name="searchQuery" autocomplete="off" placeholder="Search images..." class="search-input" id="search-input" />
+          <div class="search-history" id="search-history" style="display: none;"></div>
+        </div>
+        <button type="submit" class="search-button">Search</button>
+      </form>
+
+      <!-- Advanced Filters -->
+      <div class="filters-container" id="filters-container">
+        <div class="filter-group">
+          <label for="image-type">Image Type:</label>
+          <select id="image-type" class="filter-select">
+            <option value="all">All Types</option>
+            <option value="photo">Photos</option>
+            <option value="illustration">Illustrations</option>
+            <option value="vector">Vector Graphics</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="orientation">Orientation:</label>
+          <select id="orientation" class="filter-select">
+            <option value="all">All Orientations</option>
+            <option value="horizontal">Horizontal</option>
+            <option value="vertical">Vertical</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="sort-by">Sort By:</label>
+          <select id="sort-by" class="filter-select">
+            <option value="relevance">Relevance</option>
+            <option value="popularity">Popularity</option>
+            <option value="date">Date</option>
+            <option value="downloads">Downloads</option>
+          </select>
+        </div>
+        <button type="button" class="clear-filters" id="clear-filters">Clear Filters</button>
+      </div>
+
+      <!-- Quick Categories -->
+      <div class="categories">
+        <button class="category-btn" data-category="nature">Nature</button>
+        <button class="category-btn" data-category="animals">Animals</button>
+        <button class="category-btn" data-category="architecture">Architecture</button>
+        <button class="category-btn" data-category="food">Food</button>
+        <button class="category-btn" data-category="travel">Travel</button>
+        <button class="category-btn" data-category="technology">Technology</button>
+      </div>
+
+      <!-- Loader -->
+      <div class="loader" id="loader" style="display: none;">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+      </div>
+
+      <!-- Gallery -->
+      <ul class="gallery" id="gallery"></ul>
+
+      <!-- Load More Button -->
+      <div class="load-more-container" id="load-more-container" style="display: none;">
+        <button type="button" class="load-more-button" id="load-more-button">Load more</button>
+      </div>
+
+      <!-- Favorites Section -->
+      <div class="favorites-section" id="favorites-section" style="display: none;">
+        <h2>Your Favorites</h2>
+        <ul class="favorites-gallery" id="favorites-gallery"></ul>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
