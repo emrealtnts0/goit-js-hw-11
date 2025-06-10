@@ -6,7 +6,7 @@ export default defineConfig({
     global: 'globalThis',
   },
   build: {
-    outDir: 'dist',
+    outDir: 'docs',
     assetsDir: 'assets',
     rollupOptions: {
       output: {
