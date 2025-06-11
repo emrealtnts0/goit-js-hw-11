@@ -103,5 +103,3 @@ npm run preview  # Preview production build
 **Emre Altuntas** - [@emrealtnts0](https://github.com/emrealtnts0)
 
 ---
-
-*This project is part of the GOIT JavaScript course homework assignment.* 
