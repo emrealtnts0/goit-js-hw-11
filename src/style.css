@@ -248,14 +248,17 @@ body {
 }
 
 .clear-filters {
-  padding: 8px 16px;
+  padding: 8px 15px;
   background: var(--error-color);
   color: white;
   border: none;
   border-radius: 6px;
   font-size: 14px;
+  font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  white-space: nowrap;
+  margin-top: 23px;
 }
 
 .clear-filters:hover {
